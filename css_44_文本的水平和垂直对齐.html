@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本的水平和垂直对齐</title>
+    <style>
+        div{
+            width: 500px;
+            border: 1px red solid;
+
+            /*
+            text-align 文本的水平对齐
+                可选值：
+                    left 左侧对齐
+                    right 右对齐
+                    center 居中对齐
+                    justify 两端对齐
+
+            */
+
+            /* text-align:justify; */
+
+            font-size: 50px;
+
+        }
+
+        span{
+            font-size: 20px;
+            border: 1px blue solid;
+
+            /* 
+            vertical-align 设置元素垂直对齐的方式（相对父元素）
+                可选值：
+                    baseline 默认值  基线对齐
+                    top 顶部对齐
+                    bottom 底部对齐
+                    middle 居中对齐
+                    还可以写数字，如100px
+            */
+            vertical-align: bottom;
+        }
+
+        p{
+            border: 1px green solid;
+        }
+        /* img{
+            vertical-align: middle; 
+            /* 解决图片上下缝隙 
+        } */
+    </style>
+</head>
+<body>
+    <div>今天天气 helloy<span>还可以 hello</span>!</div>
+    <br>
+    <p>
+        <img src="./image/liu.jpg" alt="美女">
+    </p>
+    <br>
+    <div>
+        love is everybody 本能love is everybody 本能love is everybody 本能love is everybody 本能love is everybody 本能love is everybody 本能love is everybody 本能love is everybody 本能
+    </div>
+</body>
+</html>

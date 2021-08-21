@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 设置表盘样式 */
+        .clock{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 50%;
+            border: 10px black solid;
+        }
+        /* 指针样式 */
+        /* 时针 */
+        .shi{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0);
+
+            animation:rate 6400s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .shi1{
+            height: 200px;
+            width: 4px;
+            background-color: red;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+        /* 时针 */
+        .fen{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0);
+            
+            animation:rate 120s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            
+        }
+        .fen1{
+            height: 230px;
+            width: 4px;
+            background-color: green;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        /* 时针 */
+        .miao{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0);
+            
+            animation:rate 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .miao1{
+            height: 250px;
+            width: 4px;
+            background-color: yellow;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        @keyframes rate{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <!-- 时针 -->
+        <div class="shi">
+            <div class="shi1"></div>
+        </div>
+        <div class="fen">
+            <div class="fen1"></div>
+        </div>
+        <div class="miao">
+            <div class="miao1"></div>
+        </div>
+    </div>
+</body>
+</html>

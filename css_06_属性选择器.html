@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+
+    <style>
+        /*
+            [属性值]{}或标签[属性值]{}（p[title]{}）选择含有指定属性的元素
+            [属性名=属性值]{} 选择含有指定属性和属性值的元素
+            [属性名^=属性值]{} 选择属性值以指定值开头的元素
+            [属性值$=属性值]{} 选择属性值中含有以指定值结尾的元素
+            [属性值*=属性值]{} 选择属性值中含有某值的元素的元素
+
+            p[title]{}
+            p[title=3]{}
+            p[title^=b]{}
+            p[title$=g]{}
+            p[title*=i][]
+        */
+
+        p[title*=t]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p title="big">佐菲奥特曼</p>
+    <p title="two">赛文奥特曼</p>
+    <p title="atm">杰克奥特曼</p>
+    <p>艾斯奥特曼</p>
+    <p>泰罗奥特曼</p>
+</body>
+</html>

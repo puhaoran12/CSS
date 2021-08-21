@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的特点</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+
+            /*
+                浮动元素不会覆盖住文字，文字会自动环绕在浮动元素的周围，
+                    所有我们可以利用浮动来设置文字环绕图片的效果
+            */
+            float: left;
+        }
+        .box2{
+            background-color: yellowgreen;
+
+            /* 
+                设置元素浮动以后，将会从文档流中脱离，从文档流中脱离后，元素的一些特点也会发生改变
+
+                脱离文档流的特点：
+                    块元素：
+                    1.块元素不在独占页面一行
+                    2.脱离文档流以后，块元素的宽度和高度默认都被内容撑开
+
+                    行内元素：
+                        行内元素脱离文档流以后会变成块元素，特点和块元素一样
+
+                    
+                    脱离文档流后，不需要再区分块和行内了
+             */
+            float: left;
+        }
+        .box3{
+            background-color: orange;
+        }
+        .s1{
+            float: left;
+            /*行内元素本不能设置行高宽的,但设置浮动后就可以设置了*/
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <p>Kobe Bryant was born in August 23，1978, he is an American All-Star shooting guard in the National Basketball Association (NBA) who plays for the LosAngeles Lakers . He began his career at the age of 18 when he became the youngest player in league history to be drafted out of high school . And in 13 years, he has become the best player of this league . As the most fabulous Shooting Guard after Michael Jordan . He once scored 81 points at a single game in 2006.The next year, he got four 50+ games in straight. In 2008,He got the MVP award, and lead Lakers back to the top .</p>
+    <br>
+    <div class="box2">hello</div>
+    <div class="box3">hello</div>
+
+    <span class="s1">我是一个span</span>
+</body>
+</html>

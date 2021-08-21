@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪碧图</title>
+    <style>
+        a:link{
+            display: block;
+            width: 93px;
+            height: 29px;
+            background-image: url(./image/btn/link.png);
+        }
+        a:hover{
+            background-image: url(./image/btn/hover.png);
+        }
+        a:active{
+            background-image: url(./image/btn/active.png);
+        }
+
+        /* 解决后 */
+        a:link{
+            display: block;
+            width: 93px;
+            height: 29px;
+            background-image: url(./image/btn/btn.png);
+        }
+        a:hover{
+            background-position: -93px 0;
+        }
+        a:active{
+            background-position: -186px 0;
+        }
+
+        /* 
+        图片属于网页的外部资源，外部资源都需要浏览器单独发送请求加载
+            浏览器加载外部资源时是按需加载的，用则加载，不用则不加载
+            像上边的练习link会首先加载，而hover和active会在指定状态触发时才会加载
+         */
+
+         .box1{
+             width: 128px;
+             height: 46px;
+             background-image: url(./image/amazon-sprite_.png);
+             background-position: 0 0;
+         }
+         .box2{
+             width: 42px;
+             height: 30px;
+             background-image: url(./image/amazon-sprite_.png);
+             background-position: -58px -338px;
+         }
+         /* 
+         雪碧图的使用步骤：
+            1.先确定使用的图标
+            2.测量图标的大小
+            3.根据测量的图标的大小创建一个元素
+            4.将雪碧图设置为元素的背景图
+            5.设置一个偏移量background-position以显示正确的图片
+
+        雪碧图的特点：
+            一次性将多个图片加载进页面，降低请求次数，加快访问速度，提升用户的体验
+          */
+    </style>
+</head>
+<body>
+    <a href="javascript:;"></a>
+    <p>原理：当不同的状态被触发以后，切换不同的背景图片</p>
+    <p>上面图标存在第一次触发有闪烁的问题</p>
+    <p>解决后</p>
+    <p>解决原理：可以将多个小图片同意保存到一个大图片中，然后通过background-position来显示，这样图片会同时加载到网页中，就可以有效地避免出现闪烁问题，这个技术在网页中使用十分广泛</p>
+    <a href="javascript:;"></a>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

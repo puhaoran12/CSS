@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关键帧</title>
+    <style>
+        .outer{
+            height: 500px;
+            border-bottom: 10px black solid;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 50%;
+            background-color: #bfa;
+
+            /* animation-name: ball;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards; */
+            animation: ball 4s forwards ease-in infinite;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 50%;
+            background-color: red;
+
+            /* animation-name: ball;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards; */
+            animation: ball 1s forwards ease-in infinite;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 50%;
+            background-color: blue;
+
+            /* animation-name: ball;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards; */
+            animation: ball 3s forwards linear 1s infinite alternate;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 50%;
+            background-color: orange;
+
+            /* animation-name: ball;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards; */
+            animation: ball 4s forwards ease-in infinite reverse;
+        }
+        .box5{
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 50%;
+            background-color: yellowgreen;
+
+            /* animation-name: ball;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards; */
+            animation: ball 2s forwards ease-in infinite alternate-reverse;
+        }
+        .box6{
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 50%;
+            background-color: #fff;
+
+            /* animation-name: ball;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards; */
+            animation: ball 4s forwards linear infinite alternate;
+        }
+        span{
+            display: block;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+        /* 创建小球下落的动画 */
+        @keyframes ball{
+            from{
+                margin-top: 0;
+            }
+            30%{
+                margin-top: 400px;
+                animation-timing-function:ease-in;
+            }
+            66%{
+                margin-top: 100px;
+            }
+            to{
+                margin-top: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box1"><span>copy</span></div>
+        <div class="box2"><span>你</span></div>
+        <div class="box3"><span>是</span></div>
+        <div class="box4"><span>真</span></div>
+        <div class="box5"><span>能</span></div>
+        <div class="box6"><span>吃</span></div>
+
+    </div>
+</body>
+</html>

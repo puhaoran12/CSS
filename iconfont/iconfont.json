@@ -1,0 +1,44 @@
+{
+  "id": "2646349",
+  "name": "全部",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "18267907",
+      "name": "仓储仓库",
+      "font_class": "cangchucangku",
+      "unicode": "e98c",
+      "unicode_decimal": 59788
+    },
+    {
+      "icon_id": "18267919",
+      "name": "工厂",
+      "font_class": "gongchang",
+      "unicode": "e98e",
+      "unicode_decimal": 59790
+    },
+    {
+      "icon_id": "21497134",
+      "name": "爱车",
+      "font_class": "aichegujiabeifen12",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "21497136",
+      "name": "新车必备",
+      "font_class": "xinchebibei",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "21497123",
+      "name": "全部",
+      "font_class": "aichegujiabeifen7",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}

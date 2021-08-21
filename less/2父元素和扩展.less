@@ -1,0 +1,98 @@
+.box1{
+    box2{
+        color: red;
+    }
+    >.box3{
+        color: red;
+        &:hover{
+            color: blue;
+        }
+    }
+    
+    //为box1设置一个hover
+    //& 就表示外层的父元素
+    &:hover{
+        color: orange;
+    }
+
+    div &{
+        color: black;
+    }
+}
+
+
+.p1{
+    width: 100px;
+    height: 100px;
+}
+/*
+.p2{
+    width: 100px;
+    height: 100px;
+    color: red;
+}
+*/
+
+//:extend() 对当前选择器扩展指定选择器的样式（选择器分组）
+.p2:extend(.p1){
+    color: red;
+}
+
+.p3{
+    //直接对指定的样式进行引用，这里就相当于p1的样式在这里进行了复制
+    //mixin 混合
+    .p1();//可以不加括号
+}
+
+//使用类选择器时可以在选择器后边添加一个括号，这时我们实际上就创建了一个mixin（别人可以引用，但自己不可以用）
+.p4(){
+    width: 100px;
+    height: 100px;
+    background-color: #bfa;
+}
+
+.p5{
+    .p4;
+}
+
+//混合函数（mixin）在混合函数中可以直接设置变量
+// .test(@w,@h,@bg-color){
+//     width: @w;
+//     height: @h;
+//     border: 1px solid @bg-color;
+// }
+// div{
+//     //调用混合函数，按顺序传参
+//     .test(200px,300px,#bfa);
+//      //也可以不按顺序传参，但要将其形参写出
+//     .test(@h:300px,@bg-color:red,@w:100px)
+// }
+
+//也可以设置默认值，此时可以对需要改变的参数进行传递参数，不需要改变的不进行传参
+.test(@w:100px,@h:200px,@bg-color:blue){
+    width: @w;
+    height: @h;
+    border: 1px solid @bg-color;
+}
+div{
+    //调用混合函数，按顺序传参
+    .test(200px);
+}
+
+span{
+    //average对颜色取中间值
+    color:average(red,blue)
+}
+
+html{
+    width: 100%;
+    height: 100%;
+  }
+  body{
+    width: 100%;
+    height: 100%;
+    background-color: #bfa;
+  }
+  body:hover{
+      background-color:darken(#bfa,10%)
+  }

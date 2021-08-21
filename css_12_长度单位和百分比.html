@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长度单位和百分比</title>
+    <style>
+
+        html{
+            font-size: 30px;
+        }
+        /*
+            长度单位：
+                像素
+                    -屏幕实际上是由一个一个的小点构成
+                    -不同屏幕的像素大小是不同的，像素越小的屏幕显示的效果越清晰
+
+            百分比
+                -也可以将属性设置为相对其父元素属性的百分比
+                -设置百分比可以使子元素跟随父元素改变而改变
+            
+            em
+                -em是相对于元素的字体大小来计算的
+                -1em=1font-size(默认=16px)
+                -em会根据字体大小的改变而改变
+
+            rem
+                -是相对根元素的字体大小来计算
+         */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+        .box2{
+            width: 50%;
+            height: 50%;
+            background-color: red;
+        }
+        .box3{
+            width: 10em;
+            height: 10em;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" >
+        <div class="box2"></div>
+    </div>
+    <br>
+    <div class="box3"></div>
+</body>
+</html>

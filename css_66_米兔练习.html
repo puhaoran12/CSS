@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>米兔练习</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 118px;
+            margin: 0 auto;
+            background-image: url(./image/superman.jpg);
+            background-position: 0 0;
+
+            animation-name: pu;
+            
+            animation-duration: 2s;
+            animation-timing-function:steps(4);
+            animation-iteration-count:infinite;
+            
+            
+        }
+        /* .box1:hover{
+            background-position: -576px 0;
+        } */
+        /* 创建关键帧 */
+        @keyframes pu{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -400px 0;
+            }
+        }
+        @keyframes pu2{
+            from{
+                background-position: 0 118px;
+            }
+            to{
+                background-position: -400 118;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    
+</body>
+</html>

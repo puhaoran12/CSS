@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>径向渐变</title>
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+
+            /* 
+            radial-gradient() 径向渐变（放射性效果）
+                默认情况下径向渐变的形状根据元素的形状来计算的
+                    正方形-->圆形
+                    长方形-->椭圆形
+                    -我们也可以手动指定径向渐变的大小
+                    circle 正圆
+                    ellipse 椭圆
+
+                    也可以指定渐变的位置
+
+                background-image: radial-gradient()
+                    farthest-side 指发散从指定原点到最远的边
+                    closest-side 指发散从指定原点到最近的边
+                    closest-corner 指发散从指定原点到最近的角
+                    farthest-corner 指发散从指定原点到最远的角
+
+                    
+             */
+            /* background-image: radial-gradient(100px 100px,red,yellow); */
+            /* background-image: radial-gradient(circle,red,yellow); */
+            /* background-image: radial-gradient(ellipse,red,yellow);   */
+            /* 指定位置 */
+            /* background-image: radial-gradient(100px 100px at 100px 100px,red,#bfa); */
+            /* background-image: radial-gradient(at 100px 100px,red,yellow); */
+
+            /* background-image: radial-gradient(farthest-side at 100px 100px,red,#bfa); */
+            /* background-image: radial-gradient(closest-side at 100px 100px,red,#bfa); */
+            /* background-image: radial-gradient(closest-corner at 100px 100px,red,#bfa); */
+            background-image: radial-gradient(farthest-corner at 100px 100px,red,#bfa);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
